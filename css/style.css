@@ -61,6 +61,7 @@ body{
 
 #wrap p{
     font-size: 15px;
+    display: flex;
 }
 
 .contact-btn{
