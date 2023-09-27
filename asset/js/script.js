@@ -19,7 +19,7 @@ function getData(){
 
     const emailReceiver = "yudhaprasty17@gmail.com"
     let a = document.createElement("a")
-    a.href = 'mailto:${emailReceiver}?subject=${subject}&body= Halo, Saya ${name}, tolong hubungi nomor saya ${phone} untuk membahas sesuatu ${message}'
+    a.href = `mailto:${emailReceiver}?subject=${subject}&body= Halo, Saya ${name}, tolong hubungi nomor saya ${phone} untuk membahas sesuatu ${message}`
     a.click()
 
     let data = {
