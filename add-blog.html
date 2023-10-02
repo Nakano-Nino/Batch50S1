@@ -1,0 +1,167 @@
+<html>
+    <head>
+        <title>Add Project</title>
+        <link rel="stylesheet" href="./asset/css/style.css">
+        <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <img src="./asset/images/logo.png" alt="logo" />
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./add-blog.html">My Project</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <a href="./contact-me.html">Contact Me</a>
+            </div>
+        </nav>
+
+        <form onsubmit="getData(event)">
+            <div>
+              <label for="pjkName">Project Name</label>
+              <input type="text" id="pjkName"/>
+            </div>
+            <div style="display: flex; margin-bottom: 18px;">
+                <div>
+                  <label for="dateStart">Start Date</label>
+                  <input type="date" id="dateStart"/>
+                </div>
+          
+                <div>
+                  <label for="dateEnd">End Date</label>
+                  <input type="date" id="dateEnd"/>
+                </div>
+            </div>
+      
+            <div>
+              <label for="desc">Description</label>
+              <textarea id="desc"></textarea>
+            </div>
+            
+            <br>
+            <label for="input-form">Technologies</label>
+            <div class="input-form">
+                <div class="checkbox">
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="node-js"
+                                    id="node-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="node-js-checkbox">Node Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="next-js"
+                                    id="next-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="next-js-checkbox">Next Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        </div>
+                        <div class="checkbox">
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="react-js"
+                                    id="react-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="react-js-checkbox">React Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="typescript"
+                                    id="type-script-checkbox"
+                                />
+                                </td>
+                                <td><label for="type-script-checkbox">Type Script</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label>Upload Image</label>
+                <div class="input-blog-image-group">
+                    <i class="fa-solid fa-paperclip"></i>
+                    <label for="input-blog-image">
+                    <div class="btn-color">
+                        <p style="padding-top: 2px;">Choose</p>
+                    </div>
+                    <!-- <input type="file" hidden/> -->
+                  </label>
+                  
+                  <input type="file" id="input-blog-image" hidden />
+                </div>
+            </div>
+
+            <div>
+              <button>Submit</button>
+            </div>
+        </form>
+
+          <div class="container">
+              <div style="padding-top: 10px;">
+                <h1>My Project</h1>
+              </div>
+            <div id="content">
+                <!-- <div class="pjk-container">
+                    <img src="./asset/images/potrait.jpg" alt="picture" style="width: 100%; border-radius: 8px;">
+                    <p style="padding-top: 10px; margin: auto; font-weight: bold;">Yudha Prastyo</p>
+                    <p style="padding-top: 5px; padding-bottom: 5px; margin: auto; font-size: small;">Elden Lord</p>
+                    <p>Lorem ipsum dolor</p>
+                    <p>
+                        <img src="./asset/svg/node-js.svg" alt="icon" width="25px">
+                        <img src="./asset/svg/next-js.svg" alt="icon" width="25px">
+                        <img src="./asset/svg/react-js.svg" alt="icon" width="25px">
+                    </p>
+                    <div class="pjk-btn">
+                        <button style="width: 48%;">Edit</button>
+                        <button style="width: 48%; margin-right: 10px;">Delete</button>
+                    </div>
+                </div> -->
+            </div>
+          </div>
+        
+    </body>
+    <script src="./asset/fontawesome/js/all.min.js"></script>
+    <script src="./asset/js/blog.js"></script>
+</html>
