@@ -2,25 +2,39 @@
     <head>
         <title>Contact Me</title>
         <link rel="stylesheet" href="./asset/css/style.css">
+        <link rel="stylesheet" href="./asset/css/blog-responsive.css">
+        <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <nav>
-            <div class="nav-left">
-                <ul>
-                    <img src="./asset/images/logo.png" alt="logo" />
-                    <li>
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./add-blog.html">My Project</a>
-                    </li>
-                </ul>
-            </div>
+      <nav>
+        <div class="nav-left">
+            <ul>
+                <img src="./asset/images/logo.png" alt="logo" />
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./add-blog.html">My Project</a>
+                </li>
+            </ul>
+        </div>
 
-            <div class="nav-right">
-                <a href="./contact-me.html">Contact Me</a>
-            </div>
-        </nav>
+        <div class="nav-right">
+            <a href="./contact-me.html">Contact Me</a>
+        </div>
+        <div class="barsmenu" id="barsmenu" >
+            <button class="humberger-button" onclick="openhumberger()">
+              <i class="fa-solid fa-bars fa-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="humberger-nav-container" id="humberger-nav-container">
+        <a href="./index.html">Home</a>
+        <a href="./add-blog.html">My Project</a>
+        <a href="./contact-me.html" class="humberger-active">Contact Me</a>
+    </div>
 
         <form>
             <div>
@@ -59,4 +73,5 @@
           </form>
     </body>
     <script src="./asset/js/script.js"></script>
+    <script src="./asset/js/button-burger.js"></script>
 </html>

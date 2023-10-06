@@ -2,7 +2,9 @@
     <head>
         <title>Add Project</title>
         <link rel="stylesheet" href="./asset/css/style.css">
+        <link rel="stylesheet" href="./asset/css/blog-responsive.css">
         <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav>
@@ -21,7 +23,18 @@
             <div class="nav-right">
                 <a href="./contact-me.html">Contact Me</a>
             </div>
+            <div class="barsmenu" id="barsmenu" >
+                <button class="humberger-button" onclick="openhumberger()">
+                  <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
         </nav>
+
+        <div class="humberger-nav-container" id="humberger-nav-container">
+            <a href="./index.html">Home</a>
+            <a href="./add-blog.html" class="humberger-active">My Project</a>
+            <a href="./contact-me.html">Contact Me</a>
+        </div>
 
         <form onsubmit="getData(event)">
             <div>
@@ -164,4 +177,5 @@
     </body>
     <script src="./asset/fontawesome/js/all.min.js"></script>
     <script src="./asset/js/blog.js"></script>
+    <script src="./asset/js/button-burger.js"></script>
 </html>

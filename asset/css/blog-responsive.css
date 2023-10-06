@@ -1,0 +1,65 @@
+.humberger-nav-container{
+    display: none;
+  }
+  
+  .humberger-nav-container a{
+    text-decoration: none;
+    background-color: #dbdbdb;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ffff;
+  }
+  
+  .humberger-nav-container .humberger-active{
+    background-color: darkgrey;
+  }
+
+@media only screen and (min-width: 901px){
+    .barsmenu{
+      display: none;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 551px) and (max-width: 900px){
+    #content{
+      justify-content: center;
+    }
+  
+    .humberger-button{
+      margin-bottom: 23px;
+      color: black;
+      background-color: transparent;
+    }
+  
+    .nav-left a{
+      display: none;
+    }
+  
+    .nav-right{
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 550px){
+    #content{
+      justify-content: center;
+    }
+  
+    .humberger-button{
+      margin-bottom: 23px;
+      color: black;
+      background-color: transparent;
+    }
+  
+    .nav-left a{
+      display: none;
+    }
+  
+    .nav-right{
+      display: none;
+    }
+  }
