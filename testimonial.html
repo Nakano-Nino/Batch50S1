@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Testimonial</title>
+        <link rel="stylesheet" href="./asset/css/testimonial.css">
+        <link rel="stylesheet" href="./asset/css/blog-responsive.css">
+        <link rel="stylesheet" href="./asset/css/navbar.css">
+        <link rel="stylesheet" href="./asset/fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-left">
+                <ul>
+                    <img src="./asset/images/logo.png" alt="logo" />
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./add-blog.html">My Project</a>
+                    </li>
+                    <li>
+                        <a href="./testimonial.html" class="selected">Testimonial</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <a href="./contact-me.html">Contact Me</a>
+            </div>
+            <div class="barsmenu" id="barsmenu" >
+                <button class="humberger-button" onclick="openhumberger()">
+                  <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <div class="humberger-nav-container" id="humberger-nav-container">
+            <a href="./index.html">Home</a>
+            <a href="./add-blog.html" class="humberger-active">My Project</a>
+            <a href="./contact-me.html">Contact Me</a>
+        </div>
+        
+        <div class="container">
+            <div class="rating-container">
+                <h2>My Testimonials</h2>
+                <h3>Rating by Star</h3>
+                <div class="rating">
+                    <button class="rating-btn" onclick="testimonial()">
+                        All
+                    </button>
+                    <button class="rating-btn" onclick="filterTestimonial(1)">
+                        1
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="rating-btn" onclick="filterTestimonial(2)">
+                        2
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="rating-btn" onclick="filterTestimonial(3)">
+                        3
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="rating-btn" onclick="filterTestimonial(4)">
+                        4
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </button>
+                    <button class="rating-btn" onclick="filterTestimonial(5)">
+                        5
+                        <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                    </button>
+                </div>
+            </div>
+            <section class="testimonials" id="testimonials">
+                <!-- <div class="testimonial">
+                    <img src=${item.image} class="profile-testimonial" />
+                    <p class="quote">${item.comment}</p>
+                    <p class="author">- ${item.name}</p>
+                  </div> -->
+            </section>
+        </div>
+        
+    </body>
+    <script src="./asset/js/testimonial.js"></script>
+    <script src="./asset/fontawesome/js/all.min.js"></script>
+
+</html>

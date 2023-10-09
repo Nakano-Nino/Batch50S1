@@ -1,4 +1,4 @@
-nav{
+/* nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,7 +34,7 @@ nav{
     color: white;
     background-color: #111727;
 
-}
+} */
 
 body{
     background-color: rgb(227, 231, 235);

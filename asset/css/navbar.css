@@ -35,3 +35,7 @@ nav{
     background-color: #111727;
 
 }
+
+.selected{
+    font-weight: bold;
+}
