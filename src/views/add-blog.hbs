@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>Add Project</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/blog-responsive.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body class="bg-body-secondary">
+        <!-- <nav>
+            <div class="nav-left">
+                <ul>
+                    <img src="./asset/images/logo.png" alt="logo" />
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./add-blog.html" class="selected">My Project</a>
+                    </li>
+                    <li>
+                        <a href="./testimonial.html">Testimonial</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <a href="./contact-me.html">Contact Me</a>
+            </div>
+            <div class="barsmenu" id="barsmenu" >
+                <button class="humberger-button" onclick="openhumberger()">
+                  <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand ms-5" href="/">
+                <img src="images/logo.png" alt="Logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/addproject">Add Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/testimonials">Testimonials</a>
+                  </li>
+                </ul>
+                <a class="btn btn-primary btn-dark me-5" href="/contactme" role="button">Contact Me</a>
+              </div>
+            </div>
+          </nav>
+
+        <div class="humberger-nav-container" id="humberger-nav-container">
+            <a href="./index.html">Home</a>
+            <a href="./add-blog.html" class="humberger-active">My Project</a>
+            <a href="./contact-me.html">Contact Me</a>
+        </div>
+
+        <form method="post" action="/addproject">
+            <div>
+              <label for="pjkName">Project Name</label>
+              <input type="text" id="pjkName" name="pjkName"/>
+            </div>
+            <div style="display: flex; margin-bottom: 18px;">
+                <div>
+                  <label for="dateStart">Start Date</label>
+                  <input type="date" id="dateStart" name="dateStart"/>
+                </div>
+          
+                <div>
+                  <label for="dateEnd">End Date</label>
+                  <input type="date" id="dateEnd" name="dateEnd"/>
+                </div>
+            </div>
+      
+            <div>
+              <label for="desc">Description</label>
+              <textarea id="desc" name="desc"></textarea>
+            </div>
+            
+            <br>
+            <label for="input-form">Technologies</label>
+            <div class="input-form">
+                <div class="checkbox">
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="node-js"
+                                    id="node-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="node-js-checkbox">Node Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="next-js"
+                                    id="next-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="next-js-checkbox">Next Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        </div>
+                        <div class="checkbox">
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="react-js"
+                                    id="react-js-checkbox"
+                                />
+                                </td>
+                                <td><label for="react-js-checkbox">React Js</label></td>
+                            </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <table>
+                            <tr>
+                                <td>
+                                <input
+                                    style="box-shadow: none"
+                                    type="checkbox"
+                                    name="checkbox"
+                                    value="typescript"
+                                    id="type-script-checkbox"
+                                />
+                                </td>
+                                <td><label for="type-script-checkbox">Type Script</label></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label>Upload Image</label>
+                <div class="input-blog-image-group">
+                    <i class="fa-solid fa-paperclip"></i>
+                    <label for="input-blog-image">
+                    <div class="btn-color">
+                        <p>Choose</p>
+                    </div>
+                    <!-- <input type="file" hidden/> -->
+                  </label>
+                  
+                  <input type="file" id="input-blog-image" hidden />
+                </div>
+            </div>
+
+            <div>
+              <button class="btn btn-dark" type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/button-burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

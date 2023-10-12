@@ -1,0 +1,91 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F3F3;
+}
+
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+.nav-left img{
+    margin-right: 50px;
+}
+
+.nav-left ul li{
+    margin-right: 30px;
+}
+
+.nav-left a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right a{
+    margin-right: 50px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #111727;
+
+}
+
+body{
+    background-color: rgb(227, 231, 235);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title-container{
+    text-align: center;
+    margin-top: 70px;
+}
+
+.container{
+    width: 100%;
+}
+
+.wrap{
+    margin: 70px;
+}
+
+.top-item{
+    display: flex;
+}
+
+.bottom-item{
+    margin-top: 60px;
+    text-align: justify;
+}
+
+.img-container{
+    width: 80%;
+}
+
+.info-container{
+    width: 40%;
+    float: right;
+    margin: 50px 0 0 100px;
+}
+
+.duration{
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.technologies{
+    display: flex;
+}
+
+.technologies img{
+    width: 30px;
+}
+
+.tech1{
+    margin-right: 30px;
+}
