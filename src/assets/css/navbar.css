@@ -1,0 +1,41 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F3F3;
+}
+
+.nav-left ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+.nav-left img{
+    margin-right: 50px;
+}
+
+.nav-left ul li{
+    margin-right: 30px;
+}
+
+.nav-left a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-right a{
+    margin-right: 50px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #111727;
+
+}
+
+.selected{
+    font-weight: bold;
+}

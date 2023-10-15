@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <title>Project Detail</title>
+        <link rel="stylesheet" href="css/blog-detail.css">
+        <link rel="stylesheet" href="css/blog-responsive.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body class="bg-body-secondary">
+        {{!-- <nav>
+            <div class="nav-left">
+                <ul>
+                    <img src="./asset/images/logo.png" alt="logo" />
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./add-blog.html">My Project</a>
+                    </li>
+                    <li>
+                        <a href="./testimonial.html">Testimonial</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav-right">
+                <a href="./contact-me.html">Contact Me</a>
+            </div>
+            <div class="barsmenu" id="barsmenu" >
+                <button class="humberger-button" onclick="openhumberger()">
+                  <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+        </nav> --}}
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand ms-5" href="/">
+                <img src="images/logo.png" alt="Logo">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/addproject">Add Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/testimonials">Testimonials</a>
+                  </li>
+                </ul>
+                <a class="btn btn-primary btn-dark me-5" href="/contactme" role="button">Contact Me</a>
+              </div>
+            </div>
+        </nav>
+
+        <div class="humberger-nav-container" id="humberger-nav-container">
+            <a href="./index.html">Home</a>
+            <a href="./add-blog.html" class="humberger-active">Blog</a>
+            <a href="./contact-me.html">Contact Me</a>
+        </div>
+
+        <div class="container">
+            <div class="title-container">
+                <h1>Dumbways Web App</h1>
+            </div>
+            <div class="wrap">
+                <div class="top-item">
+                    <div class="img-container">
+                        <img src="images/nino.jpg" style="width: 100%;">
+                    </div>
+                    <div class="info-container">
+                        <div class="duration">
+                            <h2>Duration</h2>
+                            <p>
+                                <i class="fa-solid fa-calendar-days fa-xl" style="color: #000000; margin-right: 5px;"></i>
+                                <span>Jan 2023 - 21 Feb 2023</span> 
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-clock fa-xl" style="color: #000000;"></i>
+                                <span>1 Month</span>
+                            </p>
+                        </div>
+                        <h2>Technologies</h2>
+                        <div class="technologies">
+                            <div class="tech1">
+                                <div>
+                                    <img src="svg/node-js.svg">
+                                </div>
+                                <div>
+                                    <span>Node JS</span>
+                                </div>
+                                <div class="tech1-img">
+                                    <img src="svg/react-js.svg">
+                               </div>
+                                <div>
+                                    <span>React JS</span>
+                                </div>
+                            </div>
+                            <div class="tech2">
+                                <div>
+                                    <img src="svg/next-js.svg">
+                                </div>
+                                <div>
+                                    <span>Next JS</span>
+                                </div>
+                                <div class="tech1-img">
+                                    <img src="svg/typescript.svg">
+                               </div>
+                                <div>
+                                    <span>React JS</span>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-item">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+        reiciendis sequi ullam a iure. Natus, eaque possimus iste at dolorem
+        atque sed labore, magni officiis voluptas, cupiditate voluptate soluta
+        eveniet nulla laboriosam distinctio omnis! Voluptas vero, labore
+        corrupti iusto voluptates nam voluptatem quisquam! Voluptatum quod ipsam
+        in vel delectus odit est provident, nam veniam, unde natus explicabo
+        reprehenderit iste beatae? Expedita recusandae deleniti rem explicabo
+        asperiores, adipisci aliquam eos, ad mollitia voluptatum rerum voluptate
+        ducimus cupiditate accusantium. Ad, incidunt! Labore vitae earum
+        eligendi voluptate iure aspernatur, magni voluptatibus corrupti? Alias
+        ipsum consectetur vero illum voluptatum aut ad sunt dicta accusantium!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+        mollitia! Tempore odio ea iure quo temporibus sunt ullam numquam libero
+        ipsum fuga consectetur, consequuntur eius perferendis unde impedit
+        eligendi veritatis omnis explicabo quidem eos ad! Recusandae, adipisci
+        inventore ipsam, suscipit magni quos fugiat, temporibus aspernatur
+        reprehenderit eum aperiam error voluptatibus soluta excepturi commodi
+        voluptates vero beatae nobis minus ab libero porro nesciunt?
+        Consequatur, officia. Nemo quidem odio ullam cumque iusto nobis
+        consectetur adipisci dolorem fugit ad error, facere blanditiis sapiente
+        cupiditate quas! Odit magnam odio architecto minima ut laboriosam, esse
+        est reiciendis quisquam blanditiis deserunt vel fugit vero quis omnis.
+        Earum in alias iusto quidem, aut sed quaerat, perspiciatis nemo at vitae
+        illum ratione, delectus excepturi ex? Aliquid voluptas obcaecati
+        inventore? Voluptates dolores modi autem aliquam ratione quod in, dolor
+        dicta sed quas sit nesciunt molestias, exercitationem deleniti nam rem
+        voluptate. Itaque velit eligendi debitis placeat fuga aut, deleniti
+        ipsum eum est facilis, consequatur enim odio. Ipsam atque sit eos totam
+        cum corporis velit maxime, ab beatae odit nobis provident quis
+        voluptatibus placeat facere eum porro et, officiis inventore iure sed id
+        hic? Illo quis fugiat, neque, enim ex voluptates dolorum libero facere
+        illum porro omnis. Mollitia sequi reiciendis totam.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="js/button-burger.js"></script>
+</html>
