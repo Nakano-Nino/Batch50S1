@@ -18,27 +18,27 @@ const dataTestimonial = new Promise((resolve, reject) => {
   xhr.send()
 })
 
-  async function testimonial(){
-    try {
-      const resp = await dataTestimonial
-      let setTestimonial = ""
+//   async function testimonial(){
+//     try {
+//       const resp = await dataTestimonial
+//       let setTestimonial = ""
 
-      resp.forEach(item => {
-        setTestimonial += `
-        <div class="testimonial">
-          <img src=${item.image} class="profile-testimonial" />
-          <p class="quote">${item.comment}</p>
-          <p class="author">- ${item.name}</p>
-        </div>`
-      })
+//       resp.forEach(item => {
+//         setTestimonial += `
+//         <div class="testimonial">
+//           <img src=${item.image} class="profile-testimonial" />
+//           <p class="quote">${item.comment}</p>
+//           <p class="author">- ${item.name}</p>
+//         </div>`
+//       })
 
-      document.getElementById("testimonials").innerHTML = setTestimonial
-    } catch (error) {
-      console.log(error)
-    }
-  }
+//       document.getElementById("testimonials").innerHTML = setTestimonial
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
 
- testimonial()
+//  testimonial()
 
  async function filterTestimonial(rating){
   try {
@@ -56,8 +56,11 @@ const dataTestimonial = new Promise((resolve, reject) => {
         setTestimonial += `
           <div class="testimonial">
             <img src=${item.image} class="profile-testimonial" />
-            <p class="quote">${item.comment}</p>
-            <p class="author">- ${item.name}</p>
+              <div class="ratingDesc">
+                <p class="quote">${item.comment}</p>
+                <p class="author">- ${item.name}</p>
+                <p class="ratingStar">${item.rating}<i class="fa-solid fa-star" style="color: black;"></i></p>
+              </div>  
           </div>`
       })
     }

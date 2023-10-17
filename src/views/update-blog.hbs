@@ -1,43 +1,17 @@
 <html>
     <head>
-        <title>Add Project</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/blog-responsive.css">
+        <title>Update Project</title>
+        <link rel="stylesheet" href="/css/blog-responsive.css">
         <link rel="stylesheet" href="fontawesome/css/all.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/update-blog.css">
     </head>
     <body class="bg-body-secondary">
-        <!-- <nav>
-            <div class="nav-left">
-                <ul>
-                    <img src="./asset/images/logo.png" alt="logo" />
-                    <li>
-                        <a href="./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="./add-blog.html" class="selected">My Project</a>
-                    </li>
-                    <li>
-                        <a href="./testimonial.html">Testimonial</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="nav-right">
-                <a href="./contact-me.html">Contact Me</a>
-            </div>
-            <div class="barsmenu" id="barsmenu" >
-                <button class="humberger-button" onclick="openhumberger()">
-                  <i class="fa-solid fa-bars fa-xl"></i>
-                </button>
-            </div>
-        </nav> -->
-
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand ms-5" href="/">
-                <img src="images/logo.png" alt="Logo">
+                <img src="/images/logo.png" alt="Logo">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,7 +22,7 @@
                     <a class="nav-link" href="/">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/addproject">Add Project</a>
+                    <a class="nav-link" href="/addproject">Add Project</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/testimonials">Testimonials</a>
@@ -65,26 +39,26 @@
             <a href="./contact-me.html">Contact Me</a>
         </div>
 
-        <form method="post" action="/addproject">
+        <form method="post" action="/updateblog/{{data.id}}">
             <div>
               <label for="pjkName">Project Name</label>
-              <input type="text" id="pjkName" name="pjkName"/>
+              <input type="text" id="pjkName" name="pjkName" value="{{data.pjkName}}"/>
             </div>
             <div style="display: flex; margin-bottom: 18px;">
                 <div>
                   <label for="dateStart">Start Date</label>
-                  <input type="date" id="dateStart" name="dateStart"/>
+                  <input type="date" id="dateStart" name="dateStart" value="{{data.dateStart}}"/>
                 </div>
           
                 <div>
                   <label for="dateEnd">End Date</label>
-                  <input type="date" id="dateEnd" name="dateEnd"/>
+                  <input type="date" id="dateEnd" name="dateEnd" value="{{data.dateEnd}}"/>
                 </div>
             </div>
       
             <div>
               <label for="desc">Description</label>
-              <textarea id="desc" name="desc"></textarea>
+              <textarea id="desc" name="desc">{{data.desc}}</textarea>
             </div>
             
             <br>
@@ -100,10 +74,10 @@
                                     type="checkbox"
                                     name="checkbox"
                                     value="node-js"
-                                    id="node-js"
+                                    id="node-js-checkbox"
                                 />
                                 </td>
-                                <td><label for="node-js">Node Js</label></td>
+                                <td><label for="node-js-checkbox">Node Js</label></td>
                             </tr>
                             </table>
                         </div>
@@ -116,11 +90,11 @@
                                     type="checkbox"
                                     name="checkbox"
                                     value="next-js"
-                                    id="next-js"
+                                    id="next-js-checkbox"
                                 />
                                 </td>
-                                <td><label for="next-js">Next Js</label></td>
-                            </tr>
+                                <td><label for="next-js-checkbox">Next Js</label></td>
+                            </tr> 
                             </table>
                         </div>
                         </div>
@@ -134,10 +108,10 @@
                                     type="checkbox"
                                     name="checkbox"
                                     value="react-js"
-                                    id="react-js"
+                                    id="react-js-checkbox"
                                 />
                                 </td>
-                                <td><label for="react-js">React Js</label></td>
+                                <td><label for="react-js-checkbox">React Js</label></td>
                             </tr>
                             </table>
                         </div>
@@ -150,10 +124,10 @@
                                     type="checkbox"
                                     name="checkbox"
                                     value="typescript"
-                                    id="type-script"
+                                    id="type-script-checkbox"
                                 />
                                 </td>
-                                <td><label for="type-script">Type Script</label></td>
+                                <td><label for="type-script-checkbox">Type Script</label></td>
                             </tr>
                         </table>
                     </div>
@@ -177,7 +151,7 @@
 
             <div>
               <button class="btn btn-dark" type="submit">Submit</button>
-            </div>
+            </div> 
         </form>
     </body>
     <script src="fontawesome/js/all.min.js"></script>

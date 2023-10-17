@@ -98,11 +98,16 @@
                 </div>
             </div>
             <section class="testimonials" id="testimonials">
-                <!-- <div class="testimonial">
-                    <img src=${item.image} class="profile-testimonial" />
-                    <p class="quote">${item.comment}</p>
-                    <p class="author">- ${item.name}</p>
-                  </div> -->
+                {{#each dummyTest}}
+                <div class="testimonial">
+                    <img src={{this.image}} class="profile-testimonial" />
+                    <div class="ratingDesc">
+                        <p class="quote">{{this.comment}}</p>
+                        <p class="author">- {{this.name}}</p>
+                        <p class="ratingStar">{{this.rating}}<i class="fa-solid fa-star" style="color: black;"></i></p>
+                    </div>
+                </div>
+                {{/each}}  
             </section>
         </div>
         
