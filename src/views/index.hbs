@@ -21,17 +21,28 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                   </li>
+                  {{#if isLogin}}
                   <li class="nav-item">
                     <a class="nav-link" href="/addproject">Add Project</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a class="nav-link" href="/testimonials">Testimonials</a>
                   </li>
                 </ul>
+                <ul class="navbar-nav navbar-right mb-2 mb-lg-0">
+                {{#if isLogin}}
+                  <li><a class="nav-link" href="#">Hello, {{user}}</a></li>
+                  <li><a class="nav-link" href="/logout">Logout</a></li>
+                {{else}}  
+                  <li><a class="nav-link" href="/login">Login</a></li>  
+                  <li><a class="nav-link" href="/register">Register</a></li>
+                {{/if}}    
+                </ul>  
                 <a class="btn btn-primary btn-dark me-5" href="/contactme" role="button">Contact Me</a>
               </div>
             </div>
-          </nav>
+        </nav>
 
         <div class="humberger-nav-container" id="humberger-nav-container">
             <a href="/index">Home</a>
@@ -65,17 +76,20 @@
                 <p style="padding-top: 5px; padding-bottom: 5px; margin: auto; font-size: small;">Elden Lord</p>
             </div>
         </div>
-        <div class="container">
+        <div id="container">
             <div style="padding-top: 10px;">
               <h1>My Project</h1>
             </div>
           <div id="content">
             {{#each dummy}}
               <div class="pjk-container">
-                <img src="images/potrait.jpg" alt="picture" class="img-size">
-                <p style="padding-top: 10px; margin: auto; font-weight: bold;">{{this.name}}</p>
+                <a href="/projectdetail/{{this.id}}"><img src="{{this.image}}" alt="picture" class="img-size"></a>
+                <p style="padding-top: 10px; margin: auto; font-weight: bold;"><a style="text-decoration: none; color:black" href="/projectdetail/{{this.id}}">{{this.name}}</a></p>
                 <p style="padding-top: 5px; padding-bottom: 5px; margin: auto; font-size: small;">
-                    {{this.duration}}
+                  {{this.author}}
+                </p>
+                <p style="padding-top: 3px; padding-bottom: 5px; margin: auto; font-size:x-small;">
+                  Durasi : {{this.duration}}
                 </p>
                 <div class="desc-container">
                   <p class="pjk-text">{{this.desc}}</p>
@@ -86,14 +100,15 @@
                   {{/each}}
                 </p>
                 <div class="pjk-btn">
-                  <a class="btn btn-primary btn-dark me-5" href="/updateproject/{{this.id}}" role="button">Edit</a>
+                  {{#if this.ifclause}}
+                  <a class="btn btn-primary btn-dark me-5" style="padding: 6px 22px 0 22px; margin-left:45px" href="/updateproject/{{this.id}}" role="button">Edit</a>
                   <a class="btn btn-primary btn-dark me-5" href="/deleteproject/{{this.id}}" role="button">Delete</a>
+                  {{/if}}
                 </div>
               </div>
               {{/each}}
             </div>
           </div>
-        </div>
     </body>
     <script src="js/button-burger.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>

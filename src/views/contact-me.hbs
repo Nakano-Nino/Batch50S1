@@ -34,7 +34,7 @@
         </div>
     </nav> -->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand ms-5" href="/">
                 <img src="images/logo.png" alt="Logo">
@@ -47,17 +47,34 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                   </li>
+                  {{#if isLogin}}
                   <li class="nav-item">
                     <a class="nav-link" href="/addproject">Add Project</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a class="nav-link" href="/testimonials">Testimonials</a>
                   </li>
+                  
+                </ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                {{#if isLogin}}
+                  <li>
+                    <a class="nav-link" href="/logout">Logout</a>
+                  </li> 
+                {{else}}
+                  <li>
+                    <a class="nav-link" href="/login">Login</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="/register">Register</a>
+                  </li>
+                {{/if}}
                 </ul>
                 <a class="btn btn-primary btn-dark me-5" href="/contactme" role="button">Contact Me</a>
               </div>
             </div>
-          </nav>
+        </nav>
 
     <div class="humberger-nav-container" id="humberger-nav-container">
         <a href="./index.html">Home</a>

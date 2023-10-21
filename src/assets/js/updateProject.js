@@ -20,7 +20,18 @@ async function formUpdate(req, res){
 
     const dummyData = {...obj[0], id}
 
-    res.render('update-blog', {data: dummyData})
+    if(!req.session.isLogin){
+      req.flash('danger', "Login first")
+      res.redirect('/login')
+    }else{
+      res.render('update-blog', {
+        data: dummyData,
+        isLogin: req.session.isLogin,
+        user: req.session.user
+      })
+  }
+
+    
 
   } catch (error) {
     console.log(error);

@@ -37,7 +37,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
               <a class="navbar-brand ms-5" href="/">
-                <img src="images/logo.png" alt="Logo">
+                <img src="/images/logo.png" alt="Logo">
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,13 +47,24 @@
                   <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                   </li>
+                  {{#if isLogin}}
                   <li class="nav-item">
                     <a class="nav-link" href="/addproject">Add Project</a>
                   </li>
+                  {{/if}}
                   <li class="nav-item">
                     <a class="nav-link" href="/testimonials">Testimonials</a>
                   </li>
                 </ul>
+                <ul class="navbar-nav navbar-right mb-2 mb-lg-0">
+                {{#if isLogin}}
+                  <li><a class="nav-link" href="#">Hello, {{user}}</a></li>
+                  <li><a class="nav-link" href="/logout">Logout</a></li>
+                {{else}}  
+                  <li><a class="nav-link" href="/login">Login</a></li>  
+                  <li><a class="nav-link" href="/register">Register</a></li>
+                {{/if}}    
+                </ul>  
                 <a class="btn btn-primary btn-dark me-5" href="/contactme" role="button">Contact Me</a>
               </div>
             </div>
@@ -65,63 +76,42 @@
             <a href="./contact-me.html">Contact Me</a>
         </div>
 
-        <div class="container">
+        <div class="container">    
             <div class="title-container">
-                <h1>{{dummy.pjkName}}</h1>
+                <h1>{{data.name}}</h1>
             </div>
             <div class="wrap">
                 <div class="top-item">
                     <div class="img-container">
-                        <img src="/images/nino.jpg" style="width: 100%;">
+                        <img src="/{{data.image}}" alt="picture" style="width: 100%;">
                     </div>
                     <div class="info-container">
                         <div class="duration">
                             <h2>Duration</h2>
                             <p>
                                 <i class="fa-solid fa-calendar-days fa-xl" style="color: #000000; margin-right: 5px;"></i>
-                                <span>Jan 2023 - 21 Feb 2023</span> 
+                                <span style="font-weight: bold;">{{data.startDate}} - {{data.endDate}}</span> 
                             </p>
                             <p>
                                 <i class="fa-solid fa-clock fa-xl" style="color: #000000;"></i>
-                                <span>1 Month</span>
+                                <span style="font-weight: bold;">{{data.duration}}</span>
                             </p>
                         </div>
                         <h2>Technologies</h2>
                         <div class="technologies">
                             <div class="tech1">
-                                <div>
-                                    <img src="svg/node-js.svg">
-                                </div>
-                                <div>
-                                    <span>Node JS</span>
-                                </div>
-                                <div class="tech1-img">
-                                    <img src="svg/react-js.svg">
-                               </div>
-                                <div>
-                                    <span>React JS</span>
-                                </div>
+                                {{#each data.technologies}}
+                                <p style="margin-right: 20px; font-weight:bold;">
+                                    <img src="/svg/{{this}}.svg" style="margin-right: 5px;">{{this}}
+                                </p>
+                                {{/each}}
                             </div>
-                            <div class="tech2">
-                                <div>
-                                    <img src="svg/next-js.svg">
-                                </div>
-                                <div>
-                                    <span>Next JS</span>
-                                </div>
-                                <div class="tech1-img">
-                                    <img src="svg/typescript.svg">
-                               </div>
-                                <div>
-                                    <span>React JS</span>
-                                </div>
-                        </div>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-item">
                     <p>
-                        {{dummy.desc}}
+                        {{data.description}}
                     </p>
                 </div>
             </div>
