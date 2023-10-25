@@ -59,7 +59,7 @@ app.get('/projectdetail/:id', projectdetail)
 app.get('/testimonials', testimonials)
 app.get('/contactme', contactme)
 app.get('/updateproject/:id', update.formUpdate)
-app.post('/updateproject/:id', update.updateProject)
+app.post('/updateproject/:id', upload.single('image'), update.updateProject)
 app.get('/deleteproject/:id', deleteproject)
 
 async function projectdetail(req, res){

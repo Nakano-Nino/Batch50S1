@@ -50,7 +50,7 @@
             <a href="./contact-me.html">Contact Me</a>
         </div>
 
-        <form method="post" action="/updateproject/{{data.id}}">
+        <form method="post" action="/updateproject/{{data.id}}" enctype="multipart/form-data">
             <div>
               <label for="pjkName">Project Name</label>
               <input type="text" id="pjkName" name="pjkName" value="{{data.name}}"/>
@@ -84,7 +84,7 @@
                                     style="box-shadow: none"
                                     type="checkbox"
                                     name="checkbox"
-                                    value="node-js"
+                                    value="Node JS"
                                     id="node-js-checkbox"
                                 />
                                 </td>
@@ -100,7 +100,7 @@
                                     style="box-shadow: none"
                                     type="checkbox"
                                     name="checkbox"
-                                    value="next-js"
+                                    value="Next JS"
                                     id="next-js-checkbox"
                                 />
                                 </td>
@@ -118,7 +118,7 @@
                                     style="box-shadow: none"
                                     type="checkbox"
                                     name="checkbox"
-                                    value="react-js"
+                                    value="React JS"
                                     id="react-js-checkbox"
                                 />
                                 </td>
@@ -134,7 +134,7 @@
                                     style="box-shadow: none"
                                     type="checkbox"
                                     name="checkbox"
-                                    value="typescript"
+                                    value="Typescript"
                                     id="type-script-checkbox"
                                 />
                                 </td>

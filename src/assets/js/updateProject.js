@@ -52,10 +52,9 @@ async function updateProject(req, res){
     try {
       const { id } = req.params
       const { pjkName, dateStart, dateEnd, desc, checkbox} = req.body
+      const image = req.file.filename
 
-      console.log(checkbox);
-
-      const query = `UPDATE tb_projects SET name='${pjkName}', start_date='${dateStart}', end_date='${dateEnd}', description='${desc}', technologies='{${checkbox}}', image='nino' WHERE id='${id}'`
+      const query = `UPDATE tb_projects SET name='${pjkName}', start_date='${dateStart}', end_date='${dateEnd}', description='${desc}', technologies='{${checkbox}}', image='${image}' WHERE id='${id}'`
       let obj = await sequelize.query(query, { type: QueryTypes.UPDATE })
       res.redirect('/')
     } catch (error) {
